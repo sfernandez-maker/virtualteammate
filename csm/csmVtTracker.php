@@ -33,7 +33,7 @@ function va_sc_csm_workday_tracker($atts) {
     // =============================
     // HUBSPOT CONFIG
     // =============================
-    $HUBSPOT_TOKEN = 'pat-na1-d3f94fd4-15b0-4a78-9328-03ae98c33aa0';
+    $HUBSPOT_TOKEN = 'YOUR_HUBSPOT_TOKEN_HERE';
     $COMPANY_CACHE_TTL = 12 * HOUR_IN_SECONDS;
 
     // =============================
@@ -1026,4 +1026,5 @@ function va_sc_csm_workday_tracker($atts) {
     
     <?php
     return ob_get_clean();
+
 }
