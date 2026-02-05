@@ -9,7 +9,8 @@ add_shortcode('hubspot_invoice_viewer', function () {
     // =============================
     // 1) CONFIG (INLINE TOKEN)
     // =============================
-    $HUBSPOT_TOKEN = 'YOUR_HUBSPOT_TOKEN_HERE';
+    // In wp-config.php (near the top, after the opening php tag) put "define('HUBSPOT_PRIVATE_TOKEN', 'your_actual_token_here');
+    $HUBSPOT_TOKEN = defined('HUBSPOT_PRIVATE_TOKEN') ? HUBSPOT_PRIVATE_TOKEN : '';
 
     // Cache durations (tune as needed)
     $CONTACT_CACHE_TTL  = 12 * HOUR_IN_SECONDS;
@@ -635,3 +636,4 @@ add_shortcode('hubspot_invoice_viewer', function () {
     return ob_get_clean();
 
 });
+
