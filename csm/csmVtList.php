@@ -24,7 +24,7 @@ add_shortcode('manager_va_dashboard', function () {
     // =============================
     // HUBSPOT CONFIG
     // =============================
-    $HUBSPOT_TOKEN = 'pat-na1-d3f94fd4-15b0-4a78-9328-03ae98c33aa0';
+    $HUBSPOT_TOKEN = 'YOUR_HUBSPOT_TOKEN_HERE';
     $COMPANY_CACHE_TTL = 12 * HOUR_IN_SECONDS;
 
     // =============================
@@ -1104,4 +1104,5 @@ add_shortcode('manager_va_dashboard', function () {
     <?php
 
     return ob_get_clean();
+
 });
