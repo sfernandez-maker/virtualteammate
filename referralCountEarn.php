@@ -8,7 +8,8 @@ function hs_referrals_summary_shortcode($atts) {
   // =========================
   // 1) CONFIG
   // =========================
-  $HUBSPOT_PRIVATE_APP_TOKEN = 'YOUR_HUBSPOT_TOKEN_HERE';
+  // In wp-config.php (near the top, after the opening php tag) put "define('HUBSPOT_PRIVATE_TOKEN', 'your_actual_token_here');
+  $HUBSPOT_TOKEN = defined('HUBSPOT_PRIVATE_TOKEN') ? HUBSPOT_PRIVATE_TOKEN : '';
   $CUSTOM_OBJECT_TYPE        = '2-40827981';   // Your Referrals custom object type
 
   // =========================
@@ -251,3 +252,4 @@ function hs_referrals_render_card($title, $referrals, $weeks, $debug = []) {
 
 
 add_shortcode('referrals_summary', 'hs_referrals_summary_shortcode');
+
