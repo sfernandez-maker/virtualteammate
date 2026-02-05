@@ -8,7 +8,7 @@ function hs_referrals_summary_shortcode($atts) {
   // =========================
   // 1) CONFIG
   // =========================
-  $HUBSPOT_PRIVATE_APP_TOKEN = 'pat-na1-d3f94fd4-15b0-4a78-9328-03ae98c33aa0';
+  $HUBSPOT_PRIVATE_APP_TOKEN = 'YOUR_HUBSPOT_TOKEN_HERE';
   $CUSTOM_OBJECT_TYPE        = '2-40827981';   // Your Referrals custom object type
 
   // =========================
@@ -248,5 +248,6 @@ function hs_referrals_render_card($title, $referrals, $weeks, $debug = []) {
     }
   </style>';
 }
+
 
 add_shortcode('referrals_summary', 'hs_referrals_summary_shortcode');
